@@ -4,9 +4,7 @@ body {
 
 a {
     text-decoration: none;
-    /* убирает подчёркивание */
     color: inherit;
-    /* наследует цвет от родителя */
 }
 
 ul {
@@ -146,7 +144,8 @@ h1 {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
-    letter-spacing: 0.02em;;
+    letter-spacing: 0.02em;
+    ;
     background-color: navy;
-    
+
 }
