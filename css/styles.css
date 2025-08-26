@@ -1,9 +1,14 @@
-homework1_goit/goit-markup-hw-02/css/styles.css:root {
+:root {
     --slate: #434455;
+    /* текст */
     --navy: #2e2f42;
+    /* заголовки */
     --iris: #4d5ae5;
+    /* логотип */
     --hover: #404bbf;
+    /* hover/focus ссылок */
     --cloud: #f4f4fd;
+    /* светлый текст в футере */
 }
 
 /* База */
@@ -22,7 +27,7 @@ ul {
     list-style: none;
 }
 
-/* Логотип */
+/* Логотип (хедер/футер одинаково) */
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -30,14 +35,22 @@ ul {
     line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: var(--iris);
+    color: #4d5ae5;
+    /* строго по требованию */
 }
 
 .logo-accent {
-    color: var(--navy);
+    color: #2e2f42;
 }
 
-/* Меню навігації */
+/* span в лого (хедер) */
+.logo-accent-footer {
+    color: #f4f4fd;
+}
+
+/* span в лого (футер) */
+
+/* Навигация */
 .nav-list {
     font-family: "Roboto", sans-serif;
 }
@@ -47,15 +60,16 @@ ul {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    color: var(--navy);
+    color: #2e2f42;
+    /* строго по требованию */
 }
 
 .nav-link:hover,
 .nav-link:focus {
-    color: var(--hover);
+    color: #404bbf;
 }
 
-/* Контакти */
+/* Контакты */
 .contacts {
     font-style: normal;
 }
@@ -69,7 +83,7 @@ ul {
 
 .contact-link:hover,
 .contact-link:focus {
-    color: var(--hover);
+    color: #404bbf;
 }
 
 /* Hero */
@@ -107,7 +121,8 @@ ul {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--navy);
+    color: #2e2f42;
+    /* строго по требованию */
 }
 
 .p-four {
@@ -130,7 +145,8 @@ ul {
     letter-spacing: 0.02em;
     text-align: center;
     text-transform: capitalize;
-    color: var(--navy);
+    color: #2e2f42;
+    /* строго по требованию */
 }
 
 .team-item {
@@ -143,6 +159,8 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.02em;
     text-align: center;
+    color: #2e2f42;
+    /* заголовок карточки */
 }
 
 .team-work {
@@ -160,7 +178,8 @@ ul {
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
-    color: var(--navy);
+    color: #2e2f42;
+    /* строго по требованию */
 }
 
 .title-for-photo a {
@@ -180,13 +199,9 @@ ul {
     background-color: #2e2f42;
 }
 
-.logo-accent-footer {
-    color: #f4f4fd;
-}
-
 .footer-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
+    /* переменная со значением #F4F4FD */
 }
-
