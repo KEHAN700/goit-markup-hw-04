@@ -1,5 +1,17 @@
+homework1_goit/goit-markup-hw-02/css/styles.css
+{
+    --slate: #434455;
+    --navy: #2e2f42;
+    --iris: #4d5ae5;
+    --hover: #404bbf;
+    --cloud: #f4f4fd;
+}
+
+/* База */
 body {
-    font-family: 'Roboto' sans-serif;
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
 }
 
 a {
@@ -11,70 +23,92 @@ ul {
     list-style: none;
 }
 
-
+/* Логотип */
 .logo {
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
     font-weight: 700;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--iris);
 }
 
+.logo-accent {
+    color: var(--navy);
+}
+
+/* Меню навігації */
 .nav-list {
-    font-family: 'Roboto', sans-serif;
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    font-family: "Roboto", sans-serif;
 }
 
-header>nav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.contracts-list {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
+.nav-link {
+    font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
-    text-decoration: none;
+    color: var(--navy);
 }
 
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--hover);
+}
 
+/* Контакти */
+.contacts {
+    font-style: normal;
+}
 
-h1 {
-    font-weight: 700;
-    font-size: 56px;
-    background-color: navy;
-    line-height: 1.07143;
+.contact-link {
+    font-size: 16px;
+    line-height: 1.5;
     letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: var(--hover);
+}
+
+/* Hero */
+.hero {
+    background-color: #2e2f42;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.07;
     text-align: center;
-    color: white;
-    padding: 50px, 30px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
 }
 
 .button-order {
-    border-radius: 4px;
-    padding: 16px 32px;
-    width: 169px;
-    height: 56px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    color: white;
-    background-color: blue;
-    border: none;
+    background-color: #4D5AE5;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
     cursor: pointer;
 }
 
+.button-order:hover,
+.button-order:focus {
+    background-color: #404BBF;
+}
+
+/* Секція 2 (features) */
 .title-four {
     font-weight: 500;
     font-size: 20px;
     line-height: 1.2;
     letter-spacing: 0.02em;
+    color: var(--navy);
 }
 
 .p-four {
@@ -82,6 +116,12 @@ h1 {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+/* Секція 3 (team) */
+.team-section {
+    background-color: #F4F4FD;
 }
 
 .team-text {
@@ -90,6 +130,12 @@ h1 {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
+    text-transform: capitalize;
+    color: var(--navy);
+}
+
+.team-item {
+    background-color: #FFFFFF;
 }
 
 .team-name {
@@ -109,43 +155,17 @@ h1 {
     color: var(--slate);
 }
 
-
-.team-photo {
-    width: 264px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+/* Footer */
+.site-footer {
+    background-color: #2e2f42;
 }
 
-.portfolio {
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
+.logo-accent-footer {
+    color: #f4f4fd;
 }
 
-.title-for-photo {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-
-}
-
-.p-portfolio-six {
-    font-weight: 400;
-    font-size: 16px;
+.footer-text {
     line-height: 1.5;
     letter-spacing: 0.02em;
-}
-
-.dop-info {
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    ;
-    background-color: navy;
-
+    color: var(--cloud);
 }
