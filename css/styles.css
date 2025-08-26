@@ -1,4 +1,4 @@
-:root {
+/homework1_goit/goit-markup-hw-02/css/styles.css:root {
     --slate: #434455;
     /* текст */
     --navy: #2e2f42;
@@ -27,7 +27,7 @@ ul {
     list-style: none;
 }
 
-/* Логотип (хедер/футер одинаково) */
+/* Логотип */
 .logo {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
@@ -36,19 +36,17 @@ ul {
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: #4d5ae5;
-    /* строго по требованию */
+    /* требование: #4d5ae5 */
 }
 
 .logo-accent {
     color: #2e2f42;
 }
 
-/* span в лого (хедер) */
+/* требование: #2e2f42 */
 .logo-accent-footer {
     color: #f4f4fd;
 }
-
-/* span в лого (футер) */
 
 /* Навигация */
 .nav-list {
@@ -61,13 +59,15 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    /* строго по требованию */
+    /* требование для ссылок */
 }
 
 .nav-link:hover,
 .nav-link:focus {
     color: #404bbf;
 }
+
+/* hover/focus: #404bbf */
 
 /* Контакты */
 .contacts {
@@ -122,7 +122,7 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    /* строго по требованию */
+    /* требование для заголовка */
 }
 
 .p-four {
@@ -146,7 +146,7 @@ ul {
     text-align: center;
     text-transform: capitalize;
     color: #2e2f42;
-    /* строго по требованию */
+    /* требование для заголовка секции */
 }
 
 .team-item {
@@ -160,7 +160,7 @@ ul {
     letter-spacing: 0.02em;
     text-align: center;
     color: #2e2f42;
-    /* заголовок карточки */
+    /* требование: цвет заголовка карточки */
 }
 
 .team-work {
@@ -179,7 +179,7 @@ ul {
     line-height: 1.2;
     letter-spacing: 0.02em;
     color: #2e2f42;
-    /* строго по требованию */
+    /* требование: цвет заголовка */
 }
 
 .title-for-photo a {
@@ -190,7 +190,9 @@ ul {
     font-weight: 400;
     font-size: 16px;
     line-height: 1.5;
+    /* требование: line-height */
     letter-spacing: 0.02em;
+    /* требование: letter-spacing */
     color: var(--slate);
 }
 
@@ -203,5 +205,5 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
-    /* переменная со значением #F4F4FD */
+    /* переменная #F4F4FD по требованию */
 }
