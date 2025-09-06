@@ -407,7 +407,35 @@ ul {
     /* переменная #F4F4FD по требованию */
 }
 
+.team-text {
+    text-transform: lowercase;
+}
+
+.team-list {
+    display: flex;
+    gap: 24px;
+}
+
+.features-list li {
+    flex-basis: calc((100% - 3*24px)/4);
+}
+
+.team-item img,
+.portfolio-list img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 .site-footer .logo {
     display: inline-block;
     float: left;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
