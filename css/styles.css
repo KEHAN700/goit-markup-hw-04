@@ -12,12 +12,6 @@ body {
     background-color: #FFFFFF;
 }
 
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
-}
-
 /* Visually hidden accessibility pattern */
 .visually-hidden {
     position: absolute !important;
@@ -28,6 +22,12 @@ body {
     overflow: hidden !important;
     clip: rect(0 0 0 0) !important;
     border: 0 !important;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
 }
 
 /* ========== HEADER ========== */
