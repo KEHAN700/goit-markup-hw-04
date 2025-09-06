@@ -1,0 +1,413 @@
+homework1_goit/goit-markup-hw-02/css/styles.css:root {
+    --slate: #434455;
+    /* текст */
+    --navy: #2e2f42;
+    /* заголовки */
+    --iris: #4d5ae5;
+    /* логотип */
+    --hover: #404bbf;
+    /* hover/focus ссылок */
+    --cloud: #f4f4fd;
+    /* светлый текст в футере */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 156px;
+}
+
+.header-inner {
+    padding-top: 29px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.nav-inner {
+    display: flex;
+    align-items: center;
+    gap: 78px;
+}
+
+.nav-list {
+    display: flex;
+    gap: 42px;
+
+}
+
+.features-list {
+    display: flex;
+    gap: 90px;
+    margin-bottom: 253px;
+
+}
+
+.hero-section {
+    margin-top: 31px;
+}
+
+.contacts-list {
+    display: flex;
+    gap: 42px;
+    align-items: center;
+}
+
+
+
+.hero-section {
+    padding: 0 0 600px 0;
+    max-height: 600px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.features-list li {
+
+    min-width: 300px;
+    /* или больше */
+    flex: 1 1 300px;
+    /* можно менять 250px на нужное тебе значение */
+    text-align: left;
+}
+
+.center-text-effective {
+    text-align: center;
+    padding-top: 200px;
+
+}
+
+
+/* База */
+body {
+    font-family: "Roboto", sans-serif;
+    color: #434455;
+    background-color: #FFFFFF;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Логотип */
+.logo {
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #4d5ae5;
+    /* требование: #4d5ae5 */
+}
+
+.logo-accent {
+    color: #2e2f42;
+}
+
+/* требование: #2e2f42 */
+.logo-accent-footer {
+    color: #f4f4fd;
+}
+
+/* Навигация */
+.nav-list {
+    font-family: "Roboto", sans-serif;
+}
+
+.nav-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    /* требование для ссылок */
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #404bbf;
+}
+
+/* hover/focus: #404bbf */
+
+/* Контакты */
+.contacts {
+    font-style: normal;
+}
+
+.contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+.contact-link:hover,
+.contact-link:focus {
+    color: #404bbf;
+}
+
+/* Hero */
+.hero {
+    background-color: #2e2f42;
+}
+
+.hero-title {
+    font-size: 56px;
+    line-height: 1.07;
+    text-align: center;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+}
+
+.button-order {
+    background-color: #4D5AE5;
+    font-family: "Roboto", sans-serif;
+    height: 56px;
+    width: 169px;
+    padding-top: 0px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.button-order:hover,
+.button-order:focus {
+    background-color: #404BBF;
+}
+
+
+
+
+
+
+.team-section>ul {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    margin: 38px 0;
+    padding: 0;
+}
+
+
+.team-item {
+    width: 264px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+
+}
+
+
+.team-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Имя */
+.team-name {
+    margin: 0;
+    font-weight: 500;
+    font-size: 20px;
+    color: #2e2f42;
+}
+
+/* Должность */
+.team-work {
+    margin: 0;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--slate);
+}
+
+/* Секция портфолио */
+.portfolio-list {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.portfolio-list h2 {
+    margin-bottom: 40px;
+}
+
+/* Сетка карточек 3 в ряд */
+.portfolio-list ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+
+/* Карточка портфолио */
+.portfolio-list li {
+    background: #fff;
+    padding: 10px;
+}
+
+.portfolio-list img {
+    width: 100%;
+    height: auto;
+}
+
+.title-for-photo {
+    margin: 10px 0 5px 0;
+}
+
+.p-portfolio-six {
+    margin-bottom: 10px;
+    color: #555;
+}
+
+
+
+
+.title-four {
+    display: block;
+    text-align: left;
+    margin-bottom: 12px;
+    margin-top: 122px;
+}
+
+.p-four {
+    display: block;
+    margin-left: 24px;
+    text-align: left;
+}
+
+/* Секция 2 (features) */
+.title-four {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    /* требование для заголовка */
+}
+
+.p-four {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--slate);
+}
+
+/* Секция 3 (team) */
+.team-section {
+    background-color: #F4F4FD;
+}
+
+.team-text {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 79px;
+    color: #2e2f42;
+    /* требование для заголовка секции */
+}
+
+.team-item {
+    background-color: #FFFFFF;
+}
+
+.team-name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: #2e2f42;
+    /* требование: цвет заголовка карточки */
+}
+
+.team-work {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-align: center;
+    color: var(--slate);
+}
+
+
+
+/* Секция 4 (portfolio) */
+.title-for-photo {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    /* требование: цвет заголовка */
+}
+
+.title-for-photo a {
+    color: inherit;
+}
+
+.p-portfolio-six {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    /* требование: line-height */
+    letter-spacing: 0.02em;
+    /* требование: letter-spacing */
+    color: var(--slate);
+}
+
+/* Footer */
+.site-footer {
+    background-color: #2e2f42;
+}
+
+.footer-text {
+
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    height: 312px;
+    color: var(--cloud);
+    /* переменная #F4F4FD по требованию */
+}
+
+.site-footer .logo {
+    display: inline-block;
+    float: left;
+}
