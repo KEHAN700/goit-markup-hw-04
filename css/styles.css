@@ -9,10 +9,17 @@
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
-    background-color: #FFFFFF;
+    background-color: #fff;
     margin: 0;
 }
 
+.container {
+    width: 1158px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Visually hidden accessibility pattern */
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -22,12 +29,6 @@ body {
     overflow: hidden !important;
     clip: rect(0 0 0 0) !important;
     border: 0 !important;
-}
-
-.container {
-    width: 1158px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 /* HEADER */
@@ -156,6 +157,20 @@ body {
 .features-section {
     padding-top: 120px;
     padding-bottom: 120px;
+}
+
+.features-title {
+    margin-bottom: 72px;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+}
+
+.features-text {
+    font-size: 18px;
+    color: var(--slate);
+    text-align: center;
 }
 
 .features-list {
