@@ -4,36 +4,50 @@
     --iris: #4d5ae5;
     --hover: #404bbf;
     --cloud: #f4f4fd;
+    --accent-border: #e7e9fc;
 }
 
-/* Бокс-сайзинг и базовый сброс */
+/* Box sizing */
 *,
 *::before,
 *::after {
     box-sizing: border-box;
 }
 
-/* B1: Допускается глобальный сброс для h1..h6, p, ul */
-h1, h2, h3, h4, h5, h6, p, ul {
+/* B1: допустимый глобальный сброс для заголовков, параграфов и списков */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
     margin: 0;
     padding: 0;
 }
 
+/* Базовые настройки */
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
-    background-color: #fff;
+    background: #fff;
     margin: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* B7, B8, A3: контейнер + внутренние отступы */
+/* B7, B8, A3: контейнер для центрирования и ограничения ширины контента */
+/* A: padding: 0 15px (внутренние отступы) */
 .container {
-    width: 1200px; /* B8 — ширина контейнера 1200px */
+    width: 1200px;
+    /* B8 */
     margin: 0 auto;
-    padding: 0 15px; /* A: padding: 0 15px */
+    padding: 0 15px;
+    /* A */
 }
 
-/* Visually hidden accessibility pattern */
+/* Доступность: паттерн скрытого заголовка */
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -42,13 +56,15 @@ body {
     padding: 0 !important;
     overflow: hidden !important;
     clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
     border: 0 !important;
 }
 
 /* HEADER */
 .header-section {
-    background-color: #fff;
-    border-bottom: 1px solid #e7e9fc; /* B13: нижняя рамка */
+    background: #fff;
+    border-bottom: 1px solid var(--accent-border);
+    /* B13: тонкая нижняя рамка */
 }
 
 .header-container {
@@ -58,6 +74,7 @@ body {
     padding: 24px 0;
 }
 
+/* Левый блок навигации */
 .nav-main {
     display: flex;
     align-items: center;
@@ -67,7 +84,6 @@ body {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.17;
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--iris);
@@ -79,6 +95,7 @@ body {
     color: var(--navy);
 }
 
+/* Главное меню (горизонтально) */
 .nav-menu {
     display: flex;
     gap: 40px;
@@ -93,8 +110,8 @@ body {
     color: var(--navy);
     text-decoration: none;
     padding: 24px 0;
-    transition: color 0.3s;
     display: block;
+    transition: color .2s;
 }
 
 .menu-link:hover,
@@ -102,10 +119,7 @@ body {
     color: var(--hover);
 }
 
-.contacts-section {
-    font-style: normal;
-}
-
+/* Контакты (правый блок) */
 .contacts-list {
     display: flex;
     gap: 40px;
@@ -119,7 +133,8 @@ body {
     color: var(--slate);
     text-decoration: none;
     padding: 24px 0;
-    transition: color 0.3s;
+    display: block;
+    transition: color .2s;
 }
 
 .contacts-link:hover,
@@ -127,23 +142,23 @@ body {
     color: var(--hover);
 }
 
-/* B15: единый класс для секций */
+/* B15: единый класс .section для всех секций — отступы сверху/снизу 94px */
 .section {
-    padding: 94px 0; /* B15: верх/низ 94px */
+    padding: 94px 0;
+    /* B15 */
 }
 
-/* HERO SECTION (фоны/центрирование, без дополнительных вертикальных паддингов) */
+/* HERO SECTION */
 .hero-section {
-    background-color: var(--navy);
+    background: var(--navy);
+    color: #fff;
 }
 
 .hero-title {
     max-width: 496px;
-    margin: 0 auto 72px auto;
+    margin: 0 auto 72px;
     font-size: 56px;
     line-height: 1.07;
-    letter-spacing: 0.02em;
-    color: #fff;
     font-weight: 700;
     text-align: center;
 }
@@ -154,27 +169,24 @@ body {
     height: 56px;
     margin: 0 auto;
     border: none;
-    background-color: var(--iris);
+    background: var(--iris);
+    color: #fff;
     border-radius: 4px;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #fff;
-    transition: background-color 0.3s;
 }
 
 .hero-btn:hover,
 .hero-btn:focus {
-    background-color: var(--hover);
+    background: var(--hover);
 }
 
-/* FEATURES SECTION */
-/* видимый заголовок секции — margin-bottom: 72px (как просили) */
+/* FEATURES SECTION (вторая секция) */
+/* Секция помечается в HTML классом .features-section и обёрнута .section */
 .features-heading {
     margin-bottom: 72px;
+    /* требование: от заголовка до параграфа 72px */
     font-size: 36px;
     font-weight: 700;
     color: var(--navy);
@@ -188,72 +200,76 @@ body {
     margin: 0 0 24px 0;
 }
 
-/* Список и элементы: display:flex + gap (B10, A - требования) */
+/* Список — горизонтально, gap 24px (B10) */
 .features-list {
     display: flex;
-    gap: 24px; /* требование: gap 24px */
+    gap: 24px;
+    /* требование: gap 24px */
     list-style: none;
     margin: 0;
     padding: 0;
+    align-items: flex-start;
+    /* При необходимости: flex-wrap: wrap; — но по макету предполагается одна строка */
 }
 
-/* ширина пункта: (100% - 3*24px) / 4 — как просили */
+/* Каждый пункт — фиксированная база через calc с учётом суммарного gap */
+/* Используем flex: 0 0 calc(...) чтобы гарантировать размер (соответствие макету) */
 .features-item {
-    width: calc((100% - 72px) / 4);
-    flex-shrink: 0;
+    flex: 0 0 calc((100% - 3 * 24px) / 4);
+    /* эквивалент (100% - 72px)/4 */
     box-sizing: border-box;
 }
 
-/* Заголовок внутри пункта (h3) — margin-bottom: 8px */
+/* Заголовок внутри пункта */
 .features-title {
     margin-bottom: 8px;
-    font-weight: 500;
+    /* требование: 8px между заголовком и параграфом */
     font-size: 20px;
+    font-weight: 500;
     color: var(--navy);
-    letter-spacing: 0.02em;
 }
 
+/* Текст в пункте */
 .features-text {
     font-size: 16px;
     color: var(--slate);
+    line-height: 1.5;
 }
 
 /* TEAM SECTION */
 .team-section {
-    background-color: var(--cloud);
+    background: var(--cloud);
 }
 
 .team-title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
-    text-transform: capitalize;
     margin-bottom: 72px;
     color: var(--navy);
+    text-align: center;
 }
 
+/* Сетка карточек команды (B10, B16) */
 .team-list {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
-    justify-content: center;
     list-style: none;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 .team-card {
-    width: calc((100% - 72px) / 4);
-    border-radius: 0px 0px 4px 4px;
+    flex: 0 0 calc((100% - 3 * 24px) / 4);
     background: #fff;
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
 }
 
 .team-card img {
@@ -261,72 +277,60 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
-    border-radius: 6px 6px 0 0;
 }
 
 .team-card-content {
-    padding: 32px 0;
+    padding: 32px 16px;
     width: 100%;
 }
 
 .team-card-title {
-    font-weight: 500;
     font-size: 20px;
-    color: var(--navy);
-    text-align: center;
     margin-bottom: 8px;
+    color: var(--navy);
 }
 
 .team-card-role {
-    font-weight: 400;
     font-size: 16px;
     color: var(--slate);
-    text-align: center;
     margin: 0;
 }
 
 /* PORTFOLIO SECTION */
-/* убрал padding тут — используется .section */
+/* Заголовок портфолио */
 .portfolio-title {
     font-weight: 700;
     font-size: 36px;
-    line-height: 1.11;
-    letter-spacing: 0.02em;
-    text-align: center;
     margin-bottom: 40px;
     color: var(--navy);
+    text-align: center;
 }
 
-/* Список портфолио — сетка через flex-wrap (B16) */
+/* Список портфолио: flex-wrap для сетки (B16) */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
     list-style: none;
-    justify-content: center;
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
-/* B17: рамка только в нижней части карточки */
+/* Карточка: ширина по макету и рамка только снизу (B17) */
 .portfolio-card {
-    width: calc((100% - 48px) / 3);
-    background: #fff;
+    flex: 0 0 calc((100% - 2 * 24px) / 3);
+    /* (100% - 48px)/3 */
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-bottom: 1px solid #e7e9fc; /* граница только снизу */
+    background: #fff;
+    border-bottom: 1px solid var(--accent-border);
+    /* только снизу */
 }
 
-/* убрал бордер у внутреннего контейнера карточки */
-.portfolio-card-content {
-    width: 100%;
-    padding: 32px 16px;
-    box-sizing: border-box;
-    text-align: left;
-}
-
+/* У контента карточки рамки нет — только внутренние отступы */
 .portfolio-card img {
     width: 100%;
     height: auto;
@@ -334,13 +338,17 @@ body {
     object-fit: cover;
 }
 
+.portfolio-card-content {
+    width: 100%;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
 .portfolio-card-title {
-    font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
-    color: var(--navy);
     margin-bottom: 8px;
+    color: var(--navy);
 }
 
 .portfolio-card-link {
@@ -349,18 +357,16 @@ body {
 }
 
 .portfolio-card-category {
-    font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     color: var(--slate);
     margin: 0;
 }
 
-/* FOOTER SECTION */
+/* FOOTER */
 .footer-section {
     padding: 100px 0;
-    background-color: var(--navy);
+    background: var(--navy);
+    color: var(--cloud);
 }
 
 .footer-logo {
@@ -368,16 +374,59 @@ body {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
     color: var(--iris);
-    margin-bottom: 16px;
     text-decoration: none;
+    margin-bottom: 16px;
 }
 
 .footer-text {
     max-width: 264px;
     font-size: 16px;
     color: var(--cloud);
+}
+
+/* Утилиты (если нужно) */
+/* Сбрасываем стили списков по умолчанию */
+ul {
+    list-style: none;
+}
+
+/* Адаптивные небольшие фиксы (минимальные) */
+@media (max-width: 1200px) {
+    .container {
+        width: calc(100% - 30px);
+    }
+
+    /* сохраняем padding 15px по бокам */
+}
+
+@media (max-width: 900px) {
+
+    /* Для узких экранов — позволяем спискам переноситься */
+    .features-list,
+    .team-list,
+    .portfolio-list {
+        gap: 24px;
+        justify-content: center;
+    }
+
+    .features-item,
+    .team-card,
+    .portfolio-card {
+        flex: 0 0 calc(50% - 12px);
+        /* две колонки на планшете */
+    }
+}
+
+@media (max-width: 560px) {
+
+    .features-item,
+    .team-card,
+    .portfolio-card {
+        flex: 0 0 100%;
+    }
+
+    .hero-title {
+        font-size: 36px;
+    }
 }
