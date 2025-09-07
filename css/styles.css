@@ -6,6 +6,7 @@
     --cloud: #f4f4fd;
 }
 
+/* Базовые стили */
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
@@ -13,14 +14,14 @@ body {
     margin: 0;
 }
 
-/* Контейнер с боковыми padding для контента */
+/* Контейнер с горизонтальными отступами 15px */
 .container {
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px; /* padding: 0 15px для внутренних отступов по бокам */
+    padding: 0 15px;
 }
 
-/* Visually hidden accessibility pattern */
+/* Паттерн для скрытого заголовка (visually-hidden) */
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -29,6 +30,7 @@ body {
     padding: 0 !important;
     overflow: hidden !important;
     clip: rect(0 0 0 0) !important;
+    white-space: nowrap !important;
     border: 0 !important;
 }
 
@@ -38,12 +40,12 @@ body {
     border-bottom: 1px solid #e7e9fc;
 }
 
-/* header-container: только вертикальные паддинги, боковые идут от .container */
+/* Для header: горизонтальные отступы 15px (как вы просили) */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0; /* верх/низ 24px, боковые — через .container */
+    padding: 0 15px;
 }
 
 .nav-main {
@@ -88,10 +90,6 @@ body {
 .menu-link:hover,
 .menu-link:focus {
     color: var(--hover);
-}
-
-.contacts-section {
-    font-style: normal;
 }
 
 .contacts-list {
@@ -141,13 +139,9 @@ body {
     background-color: var(--iris);
     border-radius: 4px;
     cursor: pointer;
-    font-family: "Roboto", sans-serif;
     font-weight: 500;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
     color: #fff;
-    transition: background-color 0.3s;
 }
 
 .hero-btn:hover,
@@ -158,9 +152,31 @@ body {
 /* FEATURES SECTION */
 .features-section {
     padding: 120px 0;
+    /* сокращённая запись padding-top и padding-bottom */
 }
 
-/* Список features: display flex + gap 24px */
+/* Гарантируем горизонтальные отступы внутри контейнера секции */
+.features-section .container {
+    padding: 0 15px;
+}
+
+/* Видимый заголовок секции */
+.features-heading {
+    margin-bottom: 72px;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--navy);
+    text-align: center;
+}
+
+.features-intro {
+    font-size: 18px;
+    color: var(--slate);
+    text-align: center;
+    margin: 0 0 24px 0;
+}
+
+/* Список и элементы: display:flex + gap */
 .features-list {
     display: flex;
     gap: 24px;
@@ -169,32 +185,31 @@ body {
     padding: 0;
 }
 
-/* Элементы списка: ширина calc((100% - 72px) / 4) */
+/* ширина пункта: (100% - суммарный gap) / 4 */
 .features-item {
     width: calc((100% - 72px) / 4);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-/* Заголовки внутри элементов: margin-bottom 8px */
+/* Заголовок внутри пункта (h3) */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
     color: var(--navy);
 }
 
+/* Текст внутри пункта */
 .features-text {
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     color: var(--slate);
 }
 
 /* TEAM SECTION */
 .team-section {
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
     background-color: var(--cloud);
 }
 
@@ -221,7 +236,7 @@ body {
 
 .team-card {
     width: calc((100% - 72px) / 4);
-    border-radius: 0px 0px 4px 4px;
+    border-radius: 0 0 4px 4px;
     background: #fff;
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     display: flex;
@@ -256,13 +271,12 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: var(--slate);
-    text-align: center;
     margin: 0;
 }
 
 /* PORTFOLIO SECTION */
 .portfolio-section {
-    padding: 120px 0;
+    padding: 60px 0;
     background: #fff;
 }
 
@@ -272,7 +286,7 @@ body {
     line-height: 1.11;
     letter-spacing: 0.02em;
     text-align: center;
-    margin-bottom: 72px;
+    margin-bottom: 40px;
     color: var(--navy);
 }
 
@@ -314,8 +328,6 @@ body {
 .portfolio-card-title {
     font-weight: 500;
     font-size: 20px;
-    line-height: 1.2;
-    letter-spacing: 0.02em;
     color: var(--navy);
     margin-bottom: 8px;
 }
@@ -328,13 +340,11 @@ body {
 .portfolio-card-category {
     font-weight: 400;
     font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
     color: var(--slate);
     margin: 0;
 }
 
-/* FOOTER SECTION */
+/* FOOTER */
 .footer-section {
     padding: 100px 0;
     background-color: var(--navy);
@@ -345,9 +355,6 @@ body {
     font-family: "Raleway", sans-serif;
     font-weight: 700;
     font-size: 18px;
-    line-height: 1.17;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
     color: var(--iris);
     margin-bottom: 16px;
     text-decoration: none;

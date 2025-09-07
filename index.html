@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>WebStudio</title>
-    <!-- Normalize styles -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Main styles -->
     <link rel="stylesheet" href="./css/styles.css">
 </head>
 
@@ -25,11 +21,9 @@
             </nav>
             <address class="contacts-section" id="contacts">
                 <ul class="contacts-list">
-                    <li class="contacts-item">
-                        <a class="contacts-link" href="mailto:info@devstudio.com">info@devstudio.com</a>
-                    </li>
-                    <li class="contacts-item">
-                        <a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+                    <li class="contacts-item"><a class="contacts-link"
+                            href="mailto:info@devstudio.com">info@devstudio.com</a></li>
+                    <li class="contacts-item"><a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a>
                     </li>
                 </ul>
             </address>
@@ -48,9 +42,15 @@
         <!-- Features Section (вторая секция) -->
         <section class="features-section">
             <div class="container">
-                <!-- Скрытый заголовок для accessibility -->
+                <!-- семантический, но скрытый заголовок для доступності -->
                 <h2 class="visually-hidden">Features</h2>
 
+                <!-- видимый заголовок секції -->
+                <h2 class="features-heading">Our Features</h2>
+                <p class="features-intro">We offer best-in-class web development and marketing services for your
+                    business growth.</p>
+
+                <!-- список: display:flex + gap -->
                 <ul class="features-list">
                     <li class="features-item">
                         <h3 class="features-title">Strategy</h3>
