@@ -36,15 +36,14 @@ body {
 .header-section {
     background-color: #fff;
     border-bottom: 1px solid #e7e9fc;
-    padding: 0 15px; /* Добавлен стиль padding: 0 15px для настройки внутренних отступов */
 }
 
-/* header-container: вертикальные отступы; боковые отступы идут от .container */
+/* header-container: добавлен padding: 0 15px для внутренних отступов контента */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0; /* top/bottom 24px, left/right handled by .container */
+    padding: 24px 15px; /* изменено: добавлен боковой padding 15px */
 }
 
 .nav-main {
@@ -159,11 +158,6 @@ body {
 /* FEATURES SECTION (вторая секция) */
 .features-section {
     padding: 120px 0;
-}
-
-/* Заголовок второй секции - скрыт с помощью паттерна .visually-hidden */
-.features-section .visually-hidden {
-    /* Паттерн .visually-hidden уже определен выше и применяется к h2 с классом visually-hidden */
 }
 
 /* Список features: display:flex + gap 24px */
