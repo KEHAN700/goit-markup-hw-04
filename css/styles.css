@@ -155,7 +155,7 @@ body {
 }
 
 /* FEATURES SECTION */
-/* верх/низ секции — 120px; (короткая запись) */
+/* верх/низ секции — 120px (shorthand) */
 .features-section {
     padding: 120px 0;
 }
@@ -181,7 +181,7 @@ body {
     margin: 0 0 24px 0;
 }
 
-/* Список и элементы */
+/* Список и элементы: display:flex + gap */
 .features-list {
     display: flex;
     gap: 24px;
@@ -197,7 +197,7 @@ body {
     box-sizing: border-box;
 }
 
-/* Заголовки внутри пунктов (h3) */
+/* Заголовок внутри пункта (h3) */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
@@ -206,6 +206,7 @@ body {
     letter-spacing: 0.02em;
 }
 
+/* Текст внутри пунктов */
 .features-text {
     font-size: 16px;
     color: var(--slate);
