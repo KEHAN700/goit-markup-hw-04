@@ -15,11 +15,10 @@ body {
 
 /* Контейнер с точным боковым padding: 0 15px */
 .container {
-    max-width: 1158px;
-    padding: 0 15px;
+    width: 1158px;
     margin: 0 auto;
+    padding: 0 15px;
 }
-
 
 /* ИСПРАВЛЕНО: Для сокрытия заголовка используется паттерн .visually-hidden */
 .visually-hidden {
