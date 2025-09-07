@@ -159,7 +159,7 @@ body {
     padding-bottom: 120px;
 }
 
-/* Visible section heading and intro (separate from item styles) */
+/* Видимый заголовок и интро — отдельные классы */
 .features-heading {
     margin-bottom: 72px;
     font-size: 36px;
@@ -175,6 +175,7 @@ body {
     margin: 0 0 24px 0;
 }
 
+/* Список и элементы */
 .features-list {
     display: flex;
     gap: 24px;
@@ -188,7 +189,7 @@ body {
     flex-shrink: 0;
 }
 
-/* Item title and text */
+/* Заголовок и текст внутри пунктов списка */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
