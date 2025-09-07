@@ -159,7 +159,8 @@ body {
     padding-bottom: 120px;
 }
 
-.features-title {
+/* Visible section heading and intro (separate from item styles) */
+.features-heading {
     margin-bottom: 72px;
     font-size: 36px;
     font-weight: 700;
@@ -167,10 +168,11 @@ body {
     text-align: center;
 }
 
-.features-text {
+.features-intro {
     font-size: 18px;
     color: var(--slate);
     text-align: center;
+    margin: 0 0 24px 0;
 }
 
 .features-list {
@@ -186,6 +188,7 @@ body {
     flex-shrink: 0;
 }
 
+/* Item title and text */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
