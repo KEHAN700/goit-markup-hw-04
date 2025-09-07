@@ -159,7 +159,7 @@ body {
     padding-bottom: 120px;
 }
 
-/* Видимый заголовок и интро — отдельные классы */
+/* Видимый заголовок секции (отдельно от заголовков пунктов) */
 .features-heading {
     margin-bottom: 72px;
     font-size: 36px;
@@ -175,7 +175,7 @@ body {
     margin: 0 0 24px 0;
 }
 
-/* Список и элементы */
+/* Список и элементы: display:flex + gap */
 .features-list {
     display: flex;
     gap: 24px;
@@ -184,12 +184,14 @@ body {
     padding: 0;
 }
 
+/* Счет ширины: (100% - суммарный gap) / 4 */
 .features-item {
     width: calc((100% - 72px) / 4);
     flex-shrink: 0;
+    box-sizing: border-box;
 }
 
-/* Заголовок и текст внутри пунктов списка */
+/* Заголовки пунктов списка (h3) */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
@@ -198,6 +200,7 @@ body {
     letter-spacing: 0.02em;
 }
 
+/* Текст внутри пунктов */
 .features-text {
     font-size: 16px;
     color: var(--slate);
