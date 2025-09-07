@@ -13,6 +13,7 @@ body {
     margin: 0;
 }
 
+/* контейнер: внутренние отступы 0 15px */
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -154,12 +155,17 @@ body {
 }
 
 /* FEATURES SECTION */
+/* верх/низ секции — 120px; (короткая запись) */
 .features-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
+    padding: 120px 0;
 }
 
-/* Видимый заголовок секции (отдельно от заголовков пунктов) */
+/* гарантируем внутренние отступы контейнера секции */
+.features-section .container {
+    padding: 0 15px;
+}
+
+/* Видимый заголовок секции */
 .features-heading {
     margin-bottom: 72px;
     font-size: 36px;
@@ -175,7 +181,7 @@ body {
     margin: 0 0 24px 0;
 }
 
-/* Список и элементы: display:flex + gap */
+/* Список и элементы */
 .features-list {
     display: flex;
     gap: 24px;
@@ -184,14 +190,14 @@ body {
     padding: 0;
 }
 
-/* Счет ширины: (100% - суммарный gap) / 4 */
+/* ширина пункта: (100% - 3*24px) / 4 */
 .features-item {
     width: calc((100% - 72px) / 4);
     flex-shrink: 0;
     box-sizing: border-box;
 }
 
-/* Заголовки пунктов списка (h3) */
+/* Заголовки внутри пунктов (h3) */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
@@ -200,7 +206,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Текст внутри пунктов */
 .features-text {
     font-size: 16px;
     color: var(--slate);
