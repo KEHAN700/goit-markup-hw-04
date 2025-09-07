@@ -6,6 +6,19 @@
     --cloud: #f4f4fd;
 }
 
+/* Бокс-сайзинг и базовый сброс */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* B1: Допускается глобальный сброс для h1..h6, p, ul */
+h1, h2, h3, h4, h5, h6, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     color: var(--slate);
@@ -13,11 +26,11 @@ body {
     margin: 0;
 }
 
-/* контейнер: внутренние отступы 0 15px */
+/* B7, B8, A3: контейнер + внутренние отступы */
 .container {
-    width: 1158px;
+    width: 1200px; /* B8 — ширина контейнера 1200px */
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 15px; /* A: padding: 0 15px */
 }
 
 /* Visually hidden accessibility pattern */
@@ -35,7 +48,7 @@ body {
 /* HEADER */
 .header-section {
     background-color: #fff;
-    border-bottom: 1px solid #e7e9fc;
+    border-bottom: 1px solid #e7e9fc; /* B13: нижняя рамка */
 }
 
 .header-container {
@@ -114,9 +127,13 @@ body {
     color: var(--hover);
 }
 
-/* HERO SECTION */
+/* B15: единый класс для секций */
+.section {
+    padding: 94px 0; /* B15: верх/низ 94px */
+}
+
+/* HERO SECTION (фоны/центрирование, без дополнительных вертикальных паддингов) */
 .hero-section {
-    padding: 188px 0;
     background-color: var(--navy);
 }
 
@@ -155,17 +172,7 @@ body {
 }
 
 /* FEATURES SECTION */
-/* верх/низ секции — 120px (shorthand) */
-.features-section {
-    padding: 120px 0;
-}
-
-/* гарантируем внутренние отступы контейнера секции */
-.features-section .container {
-    padding: 0 15px;
-}
-
-/* Видимый заголовок секции */
+/* видимый заголовок секции — margin-bottom: 72px (как просили) */
 .features-heading {
     margin-bottom: 72px;
     font-size: 36px;
@@ -181,23 +188,23 @@ body {
     margin: 0 0 24px 0;
 }
 
-/* Список и элементы: display:flex + gap */
+/* Список и элементы: display:flex + gap (B10, A - требования) */
 .features-list {
     display: flex;
-    gap: 24px;
+    gap: 24px; /* требование: gap 24px */
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* ширина пункта: (100% - 3*24px) / 4 */
+/* ширина пункта: (100% - 3*24px) / 4 — как просили */
 .features-item {
     width: calc((100% - 72px) / 4);
     flex-shrink: 0;
     box-sizing: border-box;
 }
 
-/* Заголовок внутри пункта (h3) */
+/* Заголовок внутри пункта (h3) — margin-bottom: 8px */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
@@ -206,7 +213,6 @@ body {
     letter-spacing: 0.02em;
 }
 
-/* Текст внутри пунктов */
 .features-text {
     font-size: 16px;
     color: var(--slate);
@@ -214,8 +220,6 @@ body {
 
 /* TEAM SECTION */
 .team-section {
-    padding-top: 120px;
-    padding-bottom: 120px;
     background-color: var(--cloud);
 }
 
@@ -282,11 +286,7 @@ body {
 }
 
 /* PORTFOLIO SECTION */
-.portfolio-section {
-    padding: 60px 0;
-    background: #fff;
-}
-
+/* убрал padding тут — используется .section */
 .portfolio-title {
     font-weight: 700;
     font-size: 36px;
@@ -297,6 +297,7 @@ body {
     color: var(--navy);
 }
 
+/* Список портфолио — сетка через flex-wrap (B16) */
 .portfolio-list {
     display: flex;
     flex-wrap: wrap;
@@ -308,12 +309,22 @@ body {
     padding: 0;
 }
 
+/* B17: рамка только в нижней части карточки */
 .portfolio-card {
     width: calc((100% - 48px) / 3);
     background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-bottom: 1px solid #e7e9fc; /* граница только снизу */
+}
+
+/* убрал бордер у внутреннего контейнера карточки */
+.portfolio-card-content {
+    width: 100%;
+    padding: 32px 16px;
+    box-sizing: border-box;
+    text-align: left;
 }
 
 .portfolio-card img {
@@ -321,15 +332,6 @@ body {
     height: auto;
     display: block;
     object-fit: cover;
-}
-
-.portfolio-card-content {
-    width: 100%;
-    padding: 32px 16px;
-    border: 1px solid #e7e9fc;
-    border-top: none;
-    box-sizing: border-box;
-    text-align: left;
 }
 
 .portfolio-card-title {
