@@ -17,10 +17,10 @@ body {
 .container {
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px; /* точно: padding-top: 0; padding-right: 15px; padding-bottom: 0; padding-left: 15px */
+    padding: 0 15px; /* ИСПРАВЛЕНО: Для этого класса задан стиль padding: 0 15px для настройки внутренних отступов для контента */
 }
 
-/* Visually hidden accessibility pattern — используется для скрытия заголовка второй секции */
+/* ИСПРАВЛЕНО: Для сокрытия заголовка используется паттерн .visually-hidden */
 .visually-hidden {
     position: absolute !important;
     width: 1px !important;
@@ -38,12 +38,12 @@ body {
     border-bottom: 1px solid #e7e9fc;
 }
 
-/* header-container: добавлен padding: 0 15px для внутренних отступов контента */
+/* header-container: вертикальные отступы; боковые отступы идут от .container */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 15px; /* изменено: добавлен боковой padding 15px */
+    padding: 24px 0; /* top/bottom 24px, left/right handled by .container */
 }
 
 .nav-main {
