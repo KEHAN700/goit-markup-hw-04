@@ -17,7 +17,8 @@ body {
 .container {
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px; /* точно: padding-top: 0; padding-right: 15px; padding-bottom: 0; padding-left: 15px */
+    /* точно: padding-top: 0; padding-right: 15px; padding-bottom: 0; padding-left: 15px */
+    padding: 0 15px;
 }
 
 /* Visually hidden accessibility pattern — используется для скрытия заголовка второй секции */
@@ -38,12 +39,12 @@ body {
     border-bottom: 1px solid #e7e9fc;
 }
 
-/* header-container: вертикальные отступы; боковые отступы идут от .container */
+/* header-container: вертикальные паддинги; боковые обрабатывает .container */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0; /* top/bottom 24px, left/right handled by .container */
+    padding: 24px 0; /* top/bottom 24px; left/right from .container (15px) */
 }
 
 .nav-main {
@@ -111,7 +112,7 @@ body {
 }
 
 .contacts-link:hover,
-contacts-link:focus {
+.contacts-link:focus {
     color: var(--hover);
 }
 
