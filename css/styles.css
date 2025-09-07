@@ -13,11 +13,11 @@ body {
     margin: 0;
 }
 
-/* Container with padding for header */
+/* Container with proper padding */
 .container {
     width: 1158px;
     margin: 0 auto;
-    padding: 0 15px; /* Внутренние отступы для контента */
+    padding: 0 15px;
 }
 
 /* Visually hidden accessibility pattern */
@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 0;
+    padding: 24px 15px;
 }
 
 .nav-main {
@@ -159,7 +159,7 @@ body {
     padding: 120px 0;
 }
 
-/* Список features: display flex + gap 24px */
+/* Features list with display flex and gap 24px */
 .features-list {
     display: flex;
     gap: 24px;
@@ -168,13 +168,13 @@ body {
     padding: 0;
 }
 
-/* Элементы списка: ширина calc((100% - 72px) / 4) */
+/* Features items with width calc((100% - 72px) / 4) */
 .features-item {
     width: calc((100% - 72px) / 4);
     flex-shrink: 0;
 }
 
-/* Заголовки внутри элементов: margin-bottom 8px */
+/* Features titles with margin-bottom 8px */
 .features-title {
     margin-bottom: 8px;
     font-weight: 500;
