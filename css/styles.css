@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 
-/* Container with proper padding */
+/* Container */
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -42,7 +42,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 15px;
+    padding: 24px 0;
 }
 
 .nav-main {
