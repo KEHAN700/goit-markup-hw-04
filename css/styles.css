@@ -129,9 +129,7 @@ p {
     padding: 0;
 }
 
-.contacts-item {
-    /* если нужно, можно добавить индивидуальные стили для li */
-}
+
 
 .contacts-link {
     font-size: 16px;
