@@ -47,6 +47,7 @@ p {
 .header-section {
     background-color: #fff;
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -91,8 +92,24 @@ p {
     color: var(--navy);
     text-decoration: none;
     padding: 24px 0;
-    transition: color 0.3s;
     display: block;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link.active-link {
+    position: relative;
+    color: #404bbf;
+}
+
+.menu-link.active-link::after {
+    content: '';
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
 }
 
 .menu-link:hover,
@@ -117,7 +134,11 @@ p {
     color: var(--slate);
     text-decoration: none;
     padding: 24px 0;
-    transition: color 0.3s;
+}
+
+.contacts-link-mail,
+.contacts-link-tel {
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contacts-link:hover,
@@ -315,10 +336,8 @@ p {
     background-color: var(--hover);
 }
 
-.team-social-icon {
+.footer-social-icon.custom-icon {
     fill: var(--cloud);
-    width: 16px;
-    height: 16px;
 }
 
 /* PORTFOLIO SECTION */
@@ -518,8 +537,9 @@ p {
     justify-content: center;
 }
 
-.footer-social-icon {
+.footer-social-icon.custom-icon {
     fill: var(--cloud);
     width: 24px;
     height: 24px;
+    /* клас із мінімум 3 латинських символів, можуть бути дефіс чи підкреслення */
 }
