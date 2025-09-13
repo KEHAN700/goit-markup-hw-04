@@ -404,10 +404,6 @@ p {
 }
 
 .portfolio-overlay-text {
-    transform: translateY(100%);
-}
-
-.portfolio-overlay-text {
     position: absolute;
     top: 0;
     left: 0;
@@ -428,6 +424,7 @@ p {
 .portfolio-card:focus .portfolio-overlay-text {
     transform: translateY(0%);
 }
+
 
 .portfolio-card-content {
     width: 100%;
