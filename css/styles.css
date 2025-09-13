@@ -336,8 +336,12 @@ p {
     background-color: var(--hover);
 }
 
-.footer-social-icon.custom-icon {
+.footer-icon-social,
+.team-social-icon {
+    width: 24px;
+    height: 24px;
     fill: var(--cloud);
+    /* Клас містить мінімум 3 символи, всі літери латиницею, маленькі, допускається дефіс чи підкреслення */
 }
 
 /* PORTFOLIO SECTION */
@@ -527,19 +531,4 @@ p {
 .footer-social-link:hover,
 .footer-social-link:focus {
     background-color: #31d0aa;
-}
-
-.footer-social-icon-bg {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.footer-social-icon.custom-icon {
-    fill: var(--cloud);
-    width: 24px;
-    height: 24px;
-    /* клас із мінімум 3 латинських символів, можуть бути дефіс чи підкреслення */
 }
