@@ -398,11 +398,9 @@ p {
     overflow: hidden;
 }
 
-.portfolio-image-box img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+.portfolio-image-box {
+    position: relative;
+    overflow: hidden;
 }
 
 .portfolio-overlay-text {
