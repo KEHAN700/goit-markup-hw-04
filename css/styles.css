@@ -4,6 +4,7 @@
     --iris: #4d5ae5;
     --hover: #404bbf;
     --cloud: #f4f4fd;
+    --white: #fff;
 }
 
 body {
@@ -13,7 +14,6 @@ body {
     margin: 0;
 }
 
-/* Container */
 .container {
     width: 1158px;
     margin: 0 auto;
@@ -30,7 +30,6 @@ p {
     margin: 0;
 }
 
-/* Visually hidden accessibility pattern */
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -361,25 +360,48 @@ p {
 }
 
 .portfolio-card {
-    position: relative;
-    background: #fff;
-    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
-    transition: box-shadow 0.8s, transform 0.8s;
-    overflow: hidden;
-}
-
-.portfolio-card:hover,
-.portfolio-card:focus {
-    box-shadow: 0 8px 24px 0 rgba(46, 47, 66, 0.15);
-    transform: translateY(-5px) scale(1.03);
-}
-
-.portfolio-card {
     width: calc((100% - 48px) / 3);
     background: #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+}
+
+.portfolio-card:hover .portfolio-overlay-text,
+.portfolio-card:focus .portfolio-overlay-text {
+    transform: translateY(0%);
+}
+
+.portfolio-card-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-overlay-text {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px 32px;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--cloud);
+    background-color: var(--iris);
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card img {
@@ -421,7 +443,7 @@ p {
     margin: 0;
 }
 
-/* ----------- REVERSED FOOTER ----------- */
+/* FOOTER SECTION */
 .footer-section {
     background: var(--navy);
     padding: 100px 0;
@@ -429,10 +451,7 @@ p {
 
 .footer-container {
     display: flex;
-    flex-direction: row-reverse;
-    /* РЕВЕРС: соц. блок слева, лого справа */
-    align-items: flex-start;
-    /* оба блока по верхнему краю */
+    align-items: baseline;
     gap: 120px;
     max-width: 1158px;
     margin: 0 auto;
@@ -440,9 +459,9 @@ p {
 }
 
 .footer-left {
-    max-width: 264px;
     display: flex;
     flex-direction: column;
+    margin-right: 120px;
 }
 
 .footer-logo {
@@ -457,10 +476,6 @@ p {
     display: inline-block;
 }
 
-.footer-logo-accent {
-    color: var(--iris);
-}
-
 .footer-text {
     color: var(--cloud);
     font-size: 16px;
@@ -469,57 +484,58 @@ p {
 }
 
 .footer-social {
-    min-width: 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-    position: relative;
-    top: -110px;
-    /* если надо поднять чуть выше, используй top: -8px; */
 }
 
-.footer-social-title,
-.text-footer-contact {
-    color: var(--cloud);
+.footer-social-title {
+    font-weight: 500;
     font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--white);
     margin-bottom: 16px;
-    margin-top: 0;
 }
 
 .footer-social-list {
     display: flex;
-    gap: 24px;
+    gap: 16px;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.footer-social-link {
-    text-decoration: none;
-    display: inline-block;
-}
-
-.footer-icon-bg {
+.footer-social-item {
     width: 40px;
     height: 40px;
-    background: var(--iris);
+}
+
+.footer-social-link {
+    width: 100%;
+    height: 100%;
+    background-color: var(--iris);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: background 0.3s, transform 0.3s;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.footer-icon-bg:hover,
-.footer-icon-bg:focus {
-    background: var(--hover);
-    transform: scale(1.08);
+.footer-social-link:hover,
+.footer-social-link:focus {
+    background-color: #31d0aa;
 }
 
-.footer-icon-bg svg {
+.footer-social-icon-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-social-icon {
     fill: var(--cloud);
     width: 24px;
     height: 24px;
-    transition: fill 0.3s;
 }
