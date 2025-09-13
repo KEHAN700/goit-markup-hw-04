@@ -264,53 +264,6 @@ p {
     overflow: hidden;
 }
 
-.icon-bg {
-    width: 40px;
-    height: 40px;
-    background: var(--iris);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background 0.3s, box-shadow 0.3s, transform 0.3s;
-}
-
-.icon-bg:hover,
-.icon-bg:focus {
-    background: var(--hover);
-    box-shadow: 0 4px 16px rgba(46, 47, 66, 0.15);
-    transform: scale(1.08);
-}
-
-.settings-icon-team {
-    transition: fill 0.3s;
-    width: 16px;
-    height: 16px;
-    fill: var(--cloud)
-}
-
-.icon-bg:hover .settings-icon-team,
-.icon-bg:focus .settings-icon-team {
-    fill: black;
-}
-
-.social-links {
-    padding-top: 15px;
-    display: flex;
-    box-sizing: border-box;
-    padding-left: 16px;
-    justify-content: flex-start;
-    gap: 24px;
-}
-
-.team-card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-    border-radius: 6px 6px 0 0;
-}
-
 .team-card-content {
     padding: 32px 0;
     width: 100%;
@@ -330,6 +283,46 @@ p {
     color: var(--slate);
     text-align: center;
     margin: 0;
+}
+
+.team-social {
+    margin-top: 12px;
+}
+
+.team-social-list {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-social-item {
+    width: 40px;
+    height: 40px;
+}
+
+.team-social-link {
+    width: 100%;
+    height: 100%;
+    background-color: #4d5ae5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.team-social-link:hover,
+.team-social-link:focus {
+    background-color: #404bbf;
+}
+
+.team-social-icon {
+    fill: #f4f4fd;
+    width: 16px;
+    height: 16px;
 }
 
 /* PORTFOLIO SECTION */
@@ -369,39 +362,6 @@ p {
     box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     overflow: hidden;
-}
-
-.portfolio-card:hover .portfolio-overlay-text,
-.portfolio-card:focus .portfolio-overlay-text {
-    transform: translateY(0%);
-}
-
-.portfolio-card-image {
-    position: relative;
-    overflow: hidden;
-}
-
-.portfolio-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-.portfolio-overlay-text {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    padding: 40px 32px;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--cloud);
-    background-color: var(--iris);
-    transform: translateY(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio-card img {
@@ -445,7 +405,7 @@ p {
 
 /* FOOTER SECTION */
 .footer-section {
-    background: var(--navy);
+    background: #2e2f42;
     padding: 100px 0;
 }
 
@@ -477,7 +437,7 @@ p {
 }
 
 .footer-text {
-    color: var(--cloud);
+    color: #f4f4fd;
     font-size: 16px;
     margin-top: 16px;
     max-width: 264px;
@@ -486,20 +446,13 @@ p {
 .footer-social {
     display: flex;
     flex-direction: column;
-}
-
-.footer-social-title {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
-    color: var(--white);
-    margin-bottom: 16px;
+    justify-content: center;
 }
 
 .footer-social-list {
     display: flex;
-    gap: 16px;
+    justify-content: center;
+    gap: 24px;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -513,7 +466,7 @@ p {
 .footer-social-link {
     width: 100%;
     height: 100%;
-    background-color: var(--iris);
+    background-color: #4d5ae5;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -523,19 +476,11 @@ p {
 
 .footer-social-link:hover,
 .footer-social-link:focus {
-    background-color: #31d0aa;
-}
-
-.footer-social-icon-bg {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #404bbf;
 }
 
 .footer-social-icon {
-    fill: var(--cloud);
-    width: 24px;
-    height: 24px;
+    fill: #f4f4fd;
+    width: 16px;
+    height: 16px;
 }
