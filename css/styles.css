@@ -155,7 +155,7 @@ p {
     background-image:
         linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
         url("../images/office.png");
-    /* Замените на ваше название файла с фоном */
+
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
